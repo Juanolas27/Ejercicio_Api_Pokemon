@@ -1,6 +1,8 @@
 *
     margin: 0
     padding: 0
+    font-family: ('Roboto', sans-serif)
+    user-select: none
 
 body
     background-image: url(./imgs/fondo.jpg)
@@ -8,9 +10,20 @@ body
     flex-direction: column
     align-items: center
     justify-content: space-around
-
+    background-size: 100%
+    overflow-y: hidden
+    overflow-x: hidden
+    a
+        position: absolute
+        font-size: 120px
+        cursor: pointer
+        
+    #right_button
+        right: 0
+    #left_button
+        left: 0
     input
-        margin-top:30%
+        margin-top: 5%
         height: 50px
         width: 50%
         text-align: center
@@ -27,13 +40,59 @@ body
         scale: 1.2
         transition: 0.3s
         background-color: #86ffe9
-    div
-        background-color: aqua
-        width: 40%
+
+    #conteneitor
+        display: flex
+        overflow-x: scroll
+        margin-bottom: 20%
+        max-width: 80%
+        scroll-behavior: smooth
+        overflow: hidden
+        height: auto
+
+    .pokemonsito
+        background-image: url(./imgs/pokebola.jpg)
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+        background-size: 100%
+        background-repeat: no-repeat
+        background-position-y: center
+        background-position-x: center
+        min-width: 370px
+        margin-right: 40px
         border-radius: 10px
         margin-top: 4%
+        display: flex
+        flex-direction: column
+        height: 200px
+        align-items: center
+        justify-content: space-around
+        opacity: 0.6
+        
 
+        img
+            height: 50%
+            background-color: white
+            border-radius: 100px
+            position: relative
+            opacity: 1
+        h2
+            color: white
+            background-color: #219EBC linear-gradient()
+            width: auto
+            border-radius: 7px
+            padding: 2px
+            padding-right: 7px
+            padding-left: 7px
+            text-align: center
+            font-weight: bold
         ul
             list-style: none
             display: flex
             justify-content: space-around
+            width: 100%
+            li
+                @extend h2
+
+    .pokemonsito:hover
+        opacity: 1
+        transition: 0.3s

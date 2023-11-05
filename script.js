@@ -3,7 +3,7 @@ generar = () =>{
   for(let i = 0; i < numero_pokemon.value; i++){
       let num_random = Math.floor(Math.random() * 1250)
       let url_random = `https://pokeapi.co/api/v2/pokemon/?offset=${String(num_random)}&limit=20`
-      document.getElementById("body").innerHTML+= `<div id="${i}"></div>`
+      document.getElementById("conteneitor").innerHTML+= `<div id="${i}" class= "pokemonsito"></div>`
       axios.get(url_random).then((response) => {
           let data = response.data;
           data= data.results[Math.floor(Math.random() * 20)]
@@ -23,3 +23,13 @@ generar = () =>{
               for(let j = 0; j < 4; j++){
                 document.getElementById(String(i)+"j").innerHTML += `<li>${response.data.moves[Math.floor(Math.random() * response.data.moves.length)].move.name}</li>`
           }})})}}
+
+const right_button = document.getElementById("right_button")
+const left_button = document.getElementById("left_button")
+const conteneitor = document.getElementById("conteneitor")
+right_button.addEventListener("click", () => {
+  conteneitor.scrollLeft += 410*3
+})
+left_button.addEventListener("click", () => {
+  conteneitor.scrollLeft -= 410*3
+})
