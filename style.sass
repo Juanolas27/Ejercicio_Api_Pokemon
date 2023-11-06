@@ -71,12 +71,12 @@ body
 
         img
             height: 50%
-            background-color: white
+            backdrop-filter: invert(80%)
             border-radius: 100px
             position: relative
             opacity: 1
         h2
-            color: white
+            color: black
             background-color: #219EBC linear-gradient()
             width: auto
             border-radius: 7px
@@ -85,6 +85,7 @@ body
             padding-left: 7px
             text-align: center
             font-weight: bold
+            backdrop-filter: invert(80%)
         ul
             list-style: none
             display: flex
@@ -92,6 +93,8 @@ body
             width: 100%
             li
                 @extend h2
+            
+                background: none
 
     .pokemonsito:hover
         opacity: 1

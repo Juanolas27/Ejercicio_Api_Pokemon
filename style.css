@@ -77,13 +77,14 @@ body .pokemonsito {
 }
 body .pokemonsito img {
   height: 50%;
-  background-color: white;
+  -webkit-backdrop-filter: invert(80%);
+          backdrop-filter: invert(80%);
   border-radius: 100px;
   position: relative;
   opacity: 1;
 }
 body .pokemonsito h2, body .pokemonsito ul li {
-  color: white;
+  color: black;
   background-color: #219EBC linear-gradient();
   width: auto;
   border-radius: 7px;
@@ -92,12 +93,17 @@ body .pokemonsito h2, body .pokemonsito ul li {
   padding-left: 7px;
   text-align: center;
   font-weight: bold;
+  -webkit-backdrop-filter: invert(80%);
+          backdrop-filter: invert(80%);
 }
 body .pokemonsito ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+body .pokemonsito ul li {
+  background: none;
 }
 body .pokemonsito:hover {
   opacity: 1;
